@@ -1,0 +1,9 @@
+1. The only ip from our results that was within the OOPS subnet (from oops_subnet.txt) was 192.168.133.15
+2. The ip above only communicated with the IP 192.168.230.156 in the WireShark file, so that's the LP IP
+3. The only line referencing the LP IP from the proxy log:
+
+2021-03-16 08:03:53 37 192.168.90.144 200 TCP_MISS 12734 479 GET http ikhrn.invalid material - - DIRECT 192.168.230.156 application/octet-stream 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36 Edge/17.17134' PROXIED none - 192.168.90.164 SG-HTTP-Service - none -
+
+Note: Machine IP is 192.168.90.144
+4. Time of request was 08:03:53 EST (specifically EDT) and logins.json is in UTC, so now just need to find all users who were still logged in at 2021-03-16T12:03:53.0000000+00:00 (logins.json time data is recorded in this format).
+5. Any logs related to logins have the IP address in the text and say "Successful logon"; logouts do not and say "An account was logged off".  Thus we can find all id's who logged in before the communication using the Machine IP and compare that list to all the users who logged out after the communication, leading to the ID
