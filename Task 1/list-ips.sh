@@ -4,7 +4,7 @@
 # Gather the IPs from the packet into a list
 ips=$(tshark -r ./capture.pcap  -T fields -e ip.dst ip.src | sort | uniq | tr '\n' ' ')
 
-# Run remaining code if we successfully ran the previous content
+# Run remaining code if we successfully ran the previous command
 if [ $? -eq 0 ]; then
 # Create or reset the results file to copy content to
 	if [ -e 'results.txt' ]; then
