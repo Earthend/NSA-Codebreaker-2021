@@ -1,8 +1,9 @@
-## How to emulate the NTUSER.DAT file with Windows (used Powershell)
+## How to emulate the NTUSER.DAT file with Windows (using Powershell)
 
 1. Load the NTUSER.DAT file into a temporary subkey with:
 ``reg load HKLM\<temp-subkey> <NTUSER.DAT file>``
-*Now visible in registry, just look at ``HKEY_LOCAL_MACHINE`` with  ``regedit``*
+
+    + *Now visible in registry, just look at ``HKEY_LOCAL_MACHINE`` with  ``regedit``*
 
 2. Start searching/browsing with:
 ``reg query <whatever folder you want>``
@@ -11,8 +12,6 @@
 ``reg unload HKLM\<temp-subkey>``
 
 # From analyzing NTUSER.DAT, we found:
-
-### SID Processed Search Roots found (grep for "S-1-5-21-")
 
 
 
