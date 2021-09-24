@@ -26,7 +26,7 @@ It has a great UI and is easy to use.  Definitely a great tool for forensics.
 + dkr_prd10 - *builder01*
 + dkr_prd47 - *rktbot100*
 + dkr_prd55 - *tester_06*
-+ dkr_tst25 - *buillder04*
++ dkr_tst25 - *builder04*
 + dkr_tst42 - *dockerbot*
 
 ### WinSCP (grep for the WinSCP path ending)
@@ -49,4 +49,6 @@ Data: 132641706751588483
 Slack: F8-8A-0E-00-08-00-00-00-F0-E3-09-00
 ```
 
-2. Unassociated deleted value relating to the file *dkr_tst25.ppk*
+2. ***Unassociated deleted value relating to the file `dkr_tst25.ppk`***
+
+3. It was the user *builder04* on the host *dkr_tst25*
