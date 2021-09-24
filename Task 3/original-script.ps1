@@ -19,7 +19,7 @@ function Invoke-SessionGopher {
   # Aggregate all user hives in HKEY_USERS into a variable
   $UserHives = Get-ChildItem Registry::HKEY_USERS\ -ErrorAction SilentlyContinue | Where-Object {$_.Name -match '^HKEY_USERS\\S-1-5-21-[\d\-]+$'}
 
-  # For each SID beginning in S-15-21-. Loops through each user hive in HKEY_USERS.
+  # For each SID beginning in S-1-5-21-. Loops through each user hive in HKEY_USERS.
   foreach($Hive in $UserHives) {
 
     # Created for each user found. Contains all PuTTY, WinSCP, FileZilla, RDP information. 
