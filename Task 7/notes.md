@@ -24,7 +24,7 @@
 
 + The initial connection function is `cywbunaodtzjq("198.51.100.83", 6666)`
 + Plaintext output of `fingerprint` function should be like this: 
-  + username=58c80187-bba5-4fc4-b872-af14ed9694f0,version=1.3.1.3-XVT,os=Linux,timestamp=`results of tv_sec`
+  + username=unknown,version=1.3.1.3-XVT,os=Linux,timestamp=`results of tv_sec`
     + *Script to find the os info [from IBM site](https://www.ibm.com/docs/en/zos/2.2.0?topic=functions-uname-display-current-operating-system-name):*
     + *Below is my modified version to work on the docker image*
   + From this discovery, it seems that the malware builds all the info and then attempts connection with the function `cywbunaodtzjq`
@@ -72,7 +72,7 @@ int main() {
 | 15      	  | '%Y-%m-%d' |
 | 16   		  | 'nightly-exfil' |
 | 17      	  | '1.3.1.3-XVT' |
-| 18   		  | "'7\316\375\376\320\317\347\323j\367v\260\330+.\203\251\240\357*\005\004\267cfX\317]\356\226\`" |
+| 18   		  | "'7ÎýþÐÏçÓj÷v°Ø+.© ï\*·cfXÏ]î\`" |
 | 19      	  | '198.51.100.83' |
 
 ### `fp` pointer in the arguments from `kdovfwaafohzy` has the following data Base64 encoded:
@@ -82,7 +82,7 @@ int main() {
 username=unknown,version=1.3.1.3-XVT,os=Linux,timestamp=1633983216
 ```
 
-### Data from connect function ` ` before entering the function `kdovfwaafohz`
+### Data from connect function `mucytenzelakd` before entering the function `kdovfwaafohz`
 
 ```
 result = -1
@@ -189,14 +189,14 @@ payload = {static npos = 18446744073709551615,
 
 ### Data from `buf` in the function sending data to the socket.  This was the first call where data related to the keys are sent (Initialization?)
 
-##### Original Contents
+#### Original Contents
 
 ```
 P.\354\304g\254\rZG\032\230\335c\376\204\253\372;\366\320_s\231\332\032\335τ@\377~*\v\357\364\230\\^\264\367\177\354\373\023\273\360\025$\255\027t\023\317[!\366\036\303.\034\272\362\353#I\242\273\203\036\346\027W}\340\371\354\b\267:p\336\305\351aǦ/\006\303\t\020g6\001b\310-\366}ג\211\016\242\303\\K[\206\241k\224\344\272\370Ƕ6\312#\373\035\245\340\207\231\233Q.\303$\270\207\275p\313\317s_\234\350\275\065\300\224[\204m\022\256\263\241\315\060#\236\020\026\337\372\371w\334\344V:\021\071\062\373
 ```
 
 #### Hexdump Version
-
+```
 0x50    0x2e    0xec    0xc4    0x67    0xac    0x0d    0x5a
 0x47    0x1a    0x98    0xdd    0x63    0xfe    0x84    0xab
 0xfa    0x3b    0xf6    0xd0    0x5f    0x73    0x99    0xda
@@ -219,3 +219,4 @@ P.\354\304g\254\rZG\032\230\335c\376\204\253\372;\366\320_s\231\332\032\335τ@\3
 0xcd    0x30    0x23    0x9e    0x10    0x16    0xdf    0xfa
 0xf9    0x77    0xdc    0xe4    0x56    0x3a    0x11    0x39
 0x32    0xfb    0xd2
+```
