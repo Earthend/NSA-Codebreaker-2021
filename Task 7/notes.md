@@ -55,25 +55,25 @@ int main() {
 
 | stringID	  | Results 	|
 | ----------- | ----------- |
-| 1      	  | 'os' |
-| 2   		  | 'version'|
-| 3      	  | 'username' |
-| 4   		  | 'timestamp' |
-| 5      	  | 'unknown' |
-| 6   		  | '/tmp/.gglock' |
-| 7      	  | 'usr/local/src/repo' |
-| 8   		  | 'pidof git' |
-| 9      	  | 'Commit: ' |
-| 10   		  | 'Author: ' |
-| 11      	  | 'Email: ' |
-| 12   		  | 'Time: ' |
-| 13      	  | 'No data available' |
-| 14   		  | 'ninja' |
-| 15      	  | '%Y-%m-%d' |
-| 16   		  | 'nightly-exfil' |
-| 17      	  | '1.3.1.3-XVT' |
-| 18   		  | "'7ÎýþÐÏçÓj÷v°Ø+.© ï\*·cfXÏ]î\`" |
-| 19      	  | '198.51.100.83' |
+| 1      	  | os |
+| 2   		  | version|
+| 3      	  | username |
+| 4   		  | timestamp |
+| 5      	  | unknown |
+| 6   		  | /tmp/.gglock |
+| 7      	  | usr/local/src/repo |
+| 8   		  | pidof git |
+| 9      	  | Commit:  |
+| 10   		  | Author:  |
+| 11      	  | Email:  |
+| 12   		  | Time:  |
+| 13      	  | No data available |
+| 14   		  | ninja |
+| 15      	  | %Y-%m-%d |
+| 16   		  | nightly-exfil |
+| 17      	  | 1.3.1.3-XVT |
+| 18   		  | '7ÎýþÐÏçÓj÷v°Ø+.© ï\*·cfXÏ]î\` |
+| 19      	  | 198.51.100.8 |
 
 ### `fp` pointer in the arguments from `kdovfwaafohzy` has the following data Base64 encoded:
 *Timestamp changes value whenever called, of course*
