@@ -3,32 +3,8 @@
 
 
 # Static Strat
-
-## mucytenzelakd
-*INPUT:*
-ip = `198.51.100.83`
-port = `6666`
-output = *empty*
-length = 0
-
-*Function Run*
-local_310 = `198.51.100.83`
-local_320 = *empty*
-local_328 = 0
-local_314 = `6666`
-local_20 = *memory addr of pointer* FS
-result = *filler* 0xffffffff
-sock = *filler* 0xffffffff
-my_uuid = *address of pointer?*   
-$RAX = holds the addr stored in `my_uuid`
-port = `16`
-ip = the uuid??
-
-## kdovfwaafohzy
-1. local_16c = sock `6666`
-2. lcoal_178 = fp `t`
-3. 
-
++ Near the end of the while loop, there's a function that sends the messages
++ Has the format of MAGIC_START, type/length bits, the arguments, and MAGIC_END.
 
 
 # Dynamic Strat
@@ -86,10 +62,10 @@ return
 set $pc= *Address after the JNE <_Z13mucytenzelakdPKctS0_m+1397>*
 c
 return
-*Set address of the JNE <_Z13mucytenzelakdPKctS0_m+1400> to be NOP*
+*Set address of the JNE <_Z13mucytenzelakdPKctS0_m+1400> to be NOP?*
 
 # Answer
-
+?
 
 # EXTRA NOTES
 -------------------------------------------------------------------------------------------
